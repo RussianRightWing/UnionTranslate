@@ -1,6 +1,6 @@
 package rightwing.ut.exception;
 
-public class TranslatorsServiceUnavailableException extends CustomException {
+public class TranslatorsServiceUnavailableException extends RuntimeException {
     /**
      * Ошибка недоступности сервисов перевода
      * @param message какой сервис недоступен

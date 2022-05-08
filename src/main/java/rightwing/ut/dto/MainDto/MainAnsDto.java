@@ -6,12 +6,13 @@ import rightwing.ut.dto.transYandex.AnsYandexDto;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Data
 public class MainAnsDto {
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     LocalDateTime date;
-    ArrayList<AnsYandexDto.Translations> translationYandex;
+    ArrayList<HashMap<String, String>> translationYandex;
 
     public MainAnsDto(AnsYandexDto ansYandexDto, LocalDateTime date) {
         this.date = date;

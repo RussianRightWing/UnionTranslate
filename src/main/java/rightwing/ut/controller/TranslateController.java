@@ -22,7 +22,6 @@ public class TranslateController {
 
     @PostMapping("/translate")
     public ResponseEntity<MainAnsDto> translate(@RequestBody MainReqDto reqDto) {
-        log.info(reqDto.toString());
         return ResponseEntity.ok(translateService.translateYandex(reqDto));
     }
 

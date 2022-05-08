@@ -1,18 +1,11 @@
 package rightwing.ut.dto.transYandex;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Data
 public class AnsYandexDto {
-    ArrayList<Translations> translations;
-
-    @AllArgsConstructor
-    public
-    class Translations {
-        String text;
-        String detectedLanguageCode;
-    }
+    ArrayList<HashMap<String, String>> translations;
 }

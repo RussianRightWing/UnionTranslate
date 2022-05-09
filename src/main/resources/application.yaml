@@ -1,8 +1,8 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/UT
-    username: postgres
-    password: admin
+abrc#  datasource:
+#    url: jdbc:postgresql://localhost:5432/UT
+#    username: postgres
+#    password: admin
   mvc:
     pathmatch:
       matching-strategy: ant-path-matcher

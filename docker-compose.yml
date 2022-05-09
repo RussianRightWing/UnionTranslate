@@ -3,6 +3,7 @@ services:
   app:
     image: task
     build:
+      dockerfile: Dockerfile
       context: .
     container_name: app
     ports:

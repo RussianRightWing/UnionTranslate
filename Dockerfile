@@ -1,5 +1,10 @@
-FROM openjdk
+FROM gradle:7.4.2-jdk11-alpine AS build
+COPY --chown=gradle:gradle . /home/gradle/src
+WORKDIR /home/gradle/src
+RUN gradle build --no-daemon
+
+FROM openjdk:16-alpine
 EXPOSE 8080
-ARG JAR_FILE=*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+RUN mkdir /app
+COPY --from=build /home/gradle/src/build/libs/*.jar /app/ut.jar
+ENTRYPOINT ["java","-jar","/app/ut.jar"]

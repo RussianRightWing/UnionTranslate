@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/UT
+    username: postgres
+    password: admin
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+#logging:
+#  level:
+#    org.springframework: ERROR
+#    rightwing.ut: DEBUG
+#    pattern:
+#      console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+#      file: "%d %p %c{1.} [%t] %m%n"
+#    file: app.log
+authTokens:
+  yandex:
+    oathToken: AQAAAAALhurcAATuwcZaVwda5UsMiiZoSMfRzDI
+    folderId: b1gmkkvlj0attcmkmda4
+scheduler:
+  yandex:
+    intervalMs: 3600000

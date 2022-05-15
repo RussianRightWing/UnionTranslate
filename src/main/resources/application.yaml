@@ -13,4 +13,4 @@ authTokens:
     folderId: b1gmkkvlj0attcmkmda4
 scheduler:
   yandex:
-    intervalMs: 3600000
+    intervalMs: 60000

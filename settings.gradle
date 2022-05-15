@@ -1,1 +1,3 @@
 rootProject.name = 'ut'
+include 'AuthApp'
+
